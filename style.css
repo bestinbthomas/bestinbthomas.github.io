@@ -1,7 +1,3 @@
-@font-face {
-	font-family: 'Helvetica';
-	src: url('res/fonts/HelveticaNeueLTPro-Lt.otf') format('opentype');
-}
 body {
 	margin: 0;
 	background-color: white;
