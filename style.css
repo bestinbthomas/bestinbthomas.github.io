@@ -10,6 +10,7 @@ hr {
 a {
 	text-decoration: none;
 }
+
 #home_block {
 	margin-top: 50vh;
 	width: 100vw;
@@ -22,9 +23,11 @@ a {
 #profile_page {
 	background: #424242;
 }
+#projects_page {
+	background-color: #ececec;
+}
 .page {
 	margin: 0, 0;
-	width: 100vw;
 	min-height: 100vh;
 	overflow: hidden;
 }
@@ -38,7 +41,7 @@ a {
 	text-align: left;
 }
 .hello-div {
-	font-family: 'Roboto Mono', monospace;
+	font-family: "Roboto Mono", monospace;
 	color: #76ff03;
 	font-size: 64px;
 	animation: type 1.5s steps(14), blink 1.5s ease-in 1.5s infinite;
@@ -47,6 +50,64 @@ a {
 	border-right: 3px solid #76ff03;
 	width: 14ch;
 }
+
+#scroll {
+	padding-top: 70px;
+}
+#scroll span {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: hide 2s, sdb05 1.5s infinite;
+	animation: hide 2s, sdb05 1.5s infinite;
+	box-sizing: border-box;
+}
+@keyframes hide {
+	0%,
+	99% {
+		border-left: 0;
+		border-bottom: 0;
+	}
+	100% {
+		border-left: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+	}
+}
+
+@-webkit-keyframes sdb05 {
+	0% {
+		-webkit-transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}
+@keyframes sdb05 {
+	0% {
+		transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}
+
 @keyframes type {
 	0% {
 		width: 1ch;
@@ -83,14 +144,17 @@ a {
 	color: transparent;
 	display: inline-block;
 }
+.links-div a:hover {
+	text-decoration: none;
+}
 .links-div p {
 	font-family: "Chivo";
 	font-size: 22px;
 	font-weight: bolder;
 	visibility: hidden;
-	transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-webkit-transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 	margin-bottom: 0;
 }
 .links-div i {
@@ -102,9 +166,9 @@ a {
 	/* filter: grey;
 	-moz-filter: grayscale(100%);
 	-webkit-filter: grayscale(100%); */
-	transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-webkit-transition: all .5s ease;
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
 }
 #git:hover i {
 	/* filter: none;
@@ -158,15 +222,35 @@ a {
 	visibility: visible;
 	transform: scale(1.1);
 }
+#twitter:hover i {
+	/* filter: none;
+	-moz-filter: grayscale(0);
+	-webkit-filter: grayscale(0); */
+	color: #1da1f2;
+	transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+}
+#twitter:hover p {
+	visibility: visible;
+	transform: scale(1.1);
+}
 .head_div h1 {
-	color: #a1887f;
-	font-family: 'Merriweather', sans-serif;
+	font-family: "Merriweather", sans-serif;
 	font-size: 54px;
 	font-weight: 100;
 	margin-top: 10vh;
 }
+
+.profile_head h1 {
+	color: #a1887f;
+}
+
+.project_head h1 {
+	color: #2a2a2a;
+}
 .tagline_div p {
-	font-family: 'Josefin Slab', serif;
+	font-family: "Josefin Slab", serif;
 	font-size: 24px;
 	color: white;
 }
@@ -192,8 +276,7 @@ a {
 	border: 2px solid #ccc;
 	border-radius: 8px;
 	color: #ccc;
-	padding: 18px;
-	display: inline;
+	display: inline-flex;
 	text-align: center;
 	transition: all 0.3s ease-in-out;
 }
@@ -222,22 +305,33 @@ a {
 	color: white;
 	font-weight: 900;
 }
+
+.resume_div a {
+	padding: 18px;
+	color: white;
+	text-decoration: none;
+}
+
+.resume_div a:hover {
+	color: #151515;
+	text-decoration: none;
+}
+
 .contact_page {
 	margin: 0, 0;
-	width: 100vw;
 	background: #151515;
 	overflow: hidden;
 }
 .contact_head h1 {
 	margin-top: 30px;
 	color: #ccc;
-	font-family: 'Merriweather', sans-serif;
+	font-family: "Merriweather", sans-serif;
 	font-size: 54px;
 }
 
 .email_div {
 	color: #ccc;
-	font-size: 14px;
+	font-size: 12px;
 	font-family: "Roboto";
 }
 .email_div a:link,
