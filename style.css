@@ -7,9 +7,6 @@ hr {
 	max-width: 80vw;
 	color: #0077b5;
 }
-a {
-	text-decoration: none;
-}
 
 #home_block {
 	margin-top: 50vh;
@@ -304,6 +301,10 @@ a {
 .about_a:visited {
 	color: white;
 	font-weight: 900;
+}
+
+.about_a:hover {
+	text-decoration: underline !important;
 }
 
 .resume_div a {
